@@ -1,69 +1,36 @@
-# Hadoop and Spark on Docker
+# Data Science in Apache Spark 
+###Exploring the Global Terrorism Database Dataset
 
-This tool sets up a Hadoop and/or Spark **cluster** running within Docker **containers** on a **single** physical machine (e.g. your laptop). It's convenient for debugging, testing and operating a real cluster, especially when you run customized packages with changes of Hadoop/Spark source code and configuration files.
+**Level**: Moderate
+**Language**: Scala
+**Requirements**: 
+- [HDP 2.5](http://hortonworks.com/products/sandbox/) (or later) or [HDCloud](https://hortonworks.github.io/hdp-aws/)
+- Spark 1.6.x
+- Download [GTDB dataset] (https://www.kaggle.com/START-UMD/gtd)
 
+**Author**: Ian Brooks
+**Follow** [LinkedIn - Ian Brooks PhD] (https://www.linkedin.com/in/ianrbrooksphd/)
 
-The distributed cluster in Docker containers outperforms its counterparts:
+##Context
+Information on more than 150,000 Terrorist Attacks
 
-1. _[psudo-distributed Hadoop cluster](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/SingleCluster.html) on a single machine_, which is nontrivial to run HA, to launch multiple datanodes, to test HDFS balancer/mover etc.
-1. _[setting up a real cluster](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/ClusterSetup.html)_, which is complex and heavy to use, and in the first place you can afford a real cluster.
-1. _[building Ambari cluster using vbox/vmware virtual machines](https://cwiki.apache.org/confluence/display/AMBARI/Quick+Start+Guide)_, nice try. But let's see who runs faster.
+The Global Terrorism Database (GTD) is an open-source database including information on terrorist attacks around the world from 1970 through 2015 (with annual updates planned for the future). The GTD includes systematic data on domestic as well as international terrorist incidents that have occurred during this time period and now includes more than 150,000 cases. The database is maintained by researchers at the National Consortium for the Study of Terrorism and Responses to Terrorism (START), headquartered at the University of Maryland. [More Information] (http://start.umd.edu/gtd/)
 
-## Usage
-The following illustrates the basic procedure on how to use this tool. It provides two ways to set up Hadoop and Spark cluster: **from-ambari** and **from-source**.
+##Instructions 
+1. Using the provided link, please download [HDP Sandbox.] (https://hortonworks.com/products/sandbox/?gclid=CMr9tJ7a8tMCFYmffgodizMGSQ)  For assistance, please use the following [tutorial] (https://hortonworks.com/tutorial/sandbox-deployment-and-install-guide/) for assistance. 
 
-### From Source
-The only one step is to run from-source/run.sh.
+2. Using the provided link, please download Global Terrorism Database CSV file from [Kaggle.] (https://www.kaggle.com/START-UMD/gtd)  Note: You will need a Kaggle account. 
 
-```
-$ ./run.sh --help
-Usage: ./run.sh hadoop|spark [--rebuild] [--nodes=N]
+3. Using the provided link, please download the [Zeppelin Note.] (https://github.com/BrooksIan/SacWomenInData) 
 
-hadoop       Make running mode to hadoop
-spark        Make running mode to spark
---rebuild    Rebuild hadoop if in hadoop mode; else reuild spark
---nodes      Specify the number of total nodes
-```
+4. Launch HDP Sandbox. 
 
-### From Ambari
+5. Log into Apache Ambari as User: raj_ops & Password: raj_ops
 
-[Apache Ambari](https://cwiki.apache.org/confluence/display/AMBARI/Ambari) is a tool for provisioning, managing, and monitoring Apache Hadoop clusters. If using Ambari to set up Hadoop and Spark, Spark will run in Yarn client/cluster mode.
+6. In Ambari, select "Files View" and upload GTDB CSV file to the /tmp/ directory.  For assistance, please use the following [tutorial.] (https://fr.hortonworks.com/tutorial/loading-and-querying-data-with-hadoop/)
 
-1. [Optional] Choose Ambari version in `from-ambari/Dockerfile` file (default Ambari 2.2)
-1. Run `from-ambari/run.sh` to set up an Ambari cluster and launch it
+7. In Zeppelin, import the Zeppelin Note JSON file. 
 
-	```
-	$ ./run.sh --help
-	Usage: ./run.sh [--nodes=3] [--port=8080] --secure
-	
-	--nodes      Specify the number of total nodes
-	--port       Specify the port of your local machine to access Ambari Web UI (8080 - 8088)
-	--secure     Specify the cluster to be secure
-	```
-	
-1. Hit `http://localhost:port` from your browser on your local computer. The _port_ is the parameter specified in the command line of running `run.sh`. By default, it is [http://localhost:8080](http://localhost:8080). NOTE: Ambari Server can take some time to fully come up and ready to accept connections. Keep hitting the URL until you get the login page.
-1. Login the Ambari webpage with the default username:password is `admin:admin`.
-1. [Optional] Customize the repository Base URLs in the Select Stack step.
-1. On the _Install Options_ page, use the hostnames reported by `run.sh` as the Fully Qualified Domain Name (FQDN). For example:
-
-	```
-	Using the following hostnames:
-	------------------------------
-	85f9417e3d94
-	b5077ffd9f7f
-	------------------------------
-	```
-	
-1. Upload `from-ambari/id_rsa` as your SSH Private Key to automatically register hosts when asked.
-1. Follow the onscreen instructions to install Hadoop (YARN + MapReduce2, HDFS) and Spark.
-1. [Optional] Log in to any of the nodes and you're all set to use an Ambari cluster!
-
-	```
-	# login to your Ambari server node
-	$ docker exec -it caochong-ambari-0 /bin/bash
-	```
-1. [Optional] If you want to make the cluster secure, you need to login to your Ambari server node, and run install_Kerberos.sh (you may need to do "chmod 777 install_Kerberos.sh").
-Then go back to Ambari web page, follow the onscreen instructions to configure Kerberos.
 
 ## License
 Unlike all other Apache projects which use Apache license, this project uses an advanced and modern license named The Star And Thank Author License (SATA). Please see the [LICENSE](LICENSE) file for more information.
