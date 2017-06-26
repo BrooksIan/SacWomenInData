@@ -6,10 +6,10 @@
 **Requirements**: 
 - [HDP 2.5](http://hortonworks.com/products/sandbox/) (or later) or [HDCloud](https://hortonworks.github.io/hdp-aws/)
 - Spark 1.6.x
-- Download [GTDB dataset] (https://www.kaggle.com/START-UMD/gtd)
+- Download GTDB dataset https://www.kaggle.com/START-UMD/gtdﬂ
 
 **Author**: Ian Brooks
-**Follow** [LinkedIn - Ian Brooks PhD] (https://www.linkedin.com/in/ianrbrooksphd/)
+**Follow** LinkedIn - Ian Brooks PhD (https://www.linkedin.com/in/ianrbrooksphd/)
 
 ## Context
 Information on more than 150,000 Terrorist Attacks
