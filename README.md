@@ -14,10 +14,10 @@
 ## Context
 Information on more than 150,000 Terrorist Attacks
 
-The Global Terrorism Database (GTD) is an open-source database including information on terrorist attacks around the world from 1970 through 2015 (with annual updates planned for the future). The GTD includes systematic data on domestic as well as international terrorist incidents that have occurred during this time period and now includes more than 150,000 cases. The database is maintained by researchers at the National Consortium for the Study of Terrorism and Responses to Terrorism (START), headquartered at the University of Maryland. [More Information] (http://start.umd.edu/gtd/)
+The Global Terrorism Database (GTD) is an open-source database including information on terrorist attacks around the world from 1970 through 2015 (with annual updates planned for the future). The GTD includes systematic data on domestic as well as international terrorist incidents that have occurred during this time period and now includes more than 150,000 cases. The database is maintained by researchers at the National Consortium for the Study of Terrorism and Responses to Terrorism (START), headquartered at the University of Maryland. [More Information](http://start.umd.edu/gtd/)
 
 ## Instructions 
-1. Using the provided link, please download [HDP Sandbox.](https://hortonworks.com/products/sandbox/?gclid=CMr9tJ7a8tMCFYmffgodizMGSQ)  For assistance, please use the following [tutorial] (https://hortonworks.com/tutorial/sandbox-deployment-and-install-guide/) for assistance. 
+1. Using the provided link, please download [HDP Sandbox.](https://hortonworks.com/products/sandbox/?gclid=CMr9tJ7a8tMCFYmffgodizMGSQ)  For assistance, please use the following [tutorial](https://hortonworks.com/tutorial/sandbox-deployment-and-install-guide/) for assistance. 
 
 2. Using the provided link, please download Global Terrorism Database CSV file from [Kaggle.](https://www.kaggle.com/START-UMD/gtd)  Note: You will need a Kaggle account. 
 
