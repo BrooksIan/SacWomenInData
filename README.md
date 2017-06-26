@@ -2,7 +2,9 @@
 ## Exploring the Global Terrorism Database Dataset
 
 **Level**: Moderate
+
 **Language**: Scala
+
 **Requirements**: 
 - [HDP 2.5](http://hortonworks.com/products/sandbox/) (or later) or [HDCloud](https://hortonworks.github.io/hdp-aws/)
 - Spark 1.6.x
