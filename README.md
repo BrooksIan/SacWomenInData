@@ -11,6 +11,7 @@
 - Download [GTDB dataset](https://www.kaggle.com/START-UMD/gtdﬂ)
 
 **Author**: Ian Brooks
+
 **Follow** LinkedIn - [Ian Brooks PhD](https://www.linkedin.com/in/ianrbrooksphd/)
 
 ## Context
