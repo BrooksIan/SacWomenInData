@@ -2,13 +2,6 @@
 
 This tool sets up a Hadoop and/or Spark **cluster** running within Docker **containers** on a **single** physical machine (e.g. your laptop). It's convenient for debugging, testing and operating a real cluster, especially when you run customized packages with changes of Hadoop/Spark source code and configuration files.
 
-## Why Me
-This tool is:
-
-- **easy to go**: just one command `run.sh` (Tell me, friend, can you ask for anything more? ).
-- **customizable**: you can specify the cluster specs easily, e.g. HA-enabled, number of datanodes, LDAP, security etc.
-- **configurable**: you can either change the Hadoop and/or Spark configuration files before launching the cluster or change them online by logging on the virtual machines.
-- **elastic**: imagine your physical machine can run as many containers as you wish.
 
 The distributed cluster in Docker containers outperforms its counterparts:
 
