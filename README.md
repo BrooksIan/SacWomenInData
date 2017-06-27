@@ -32,7 +32,7 @@ The Global Terrorism Database (GTD) is an open-source database including informa
 
 6. In Ambari, select "Files View" and upload GTDB CSV file to the /tmp/ directory.  For assistance, please use the following [tutorial.](https://fr.hortonworks.com/tutorial/loading-and-querying-data-with-hadoop/)
 
-7. In Zeppelin, download the Zeppelin Note [JSON file.](https://github.com/BrooksIan/SacWomenInData)
+7. In Zeppelin, download the Zeppelin Note [JSON file.](https://github.com/BrooksIan/SacWomenInData) For assistance, please use the following [tutorial](https://hortonworks.com/tutorial/getting-started-with-apache-zeppelin/)
 
 
 ## License
